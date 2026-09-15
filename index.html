@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SOARAXIS — Technology that compounds</title>
-<meta name="description" content="SOARAXIS Private Limited — a Bengaluru technology company building software products, discovery platforms and community applications, and advising teams that ship at scale.">
+<meta name="description" content="SOARAXIS Private Limited — a Bengaluru technology company building software products, applied AI systems, discovery platforms and community applications, and advising teams that ship at scale.">
 <meta name="theme-color" content="#ffffff">
 
 <!-- Open Graph / social -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="SOARAXIS — Technology that compounds">
-<meta property="og:description" content="Software products, discovery platforms and engineering advisory, from Bengaluru.">
+<meta property="og:description" content="Software products, applied AI, discovery platforms and engineering advisory, from Bengaluru.">
 <meta property="og:url" content="https://soaraxis.com/">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -126,6 +126,24 @@
   .card h3{margin:0 0 9px;font-size:1.12rem;font-weight:650;letter-spacing:-.01em}
   .card p{margin:0;color:var(--ink-soft);font-size:.97rem}
 
+  /* ---------- AI band ---------- */
+  .ai-band{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .ai-band::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(680px 340px at 88% 0%, #dbeafe 0%, transparent 68%),
+      radial-gradient(560px 300px at 4% 100%, #eef2ff 0%, transparent 70%);
+  }
+  .ai-band .wrap{position:relative}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  @media (max-width:880px){ .grid-3{grid-template-columns:1fr} }
+  .ai-note{
+    margin-top:34px;padding:18px 22px;border-left:3px solid var(--accent);
+    background:rgba(255,255,255,.72);border-radius:0 10px 10px 0;
+    color:var(--ink-soft);font-size:1rem;max-width:72ch;
+  }
+  .ai-note strong{color:var(--ink);font-weight:600}
+
   /* ---------- Split / about ---------- */
   .split{display:grid;gap:56px;grid-template-columns:1.15fr .85fr;align-items:start}
   @media (max-width:880px){ .split{grid-template-columns:1fr;gap:40px} }
@@ -172,6 +190,7 @@
     </a>
     <nav class="nav-links">
       <a href="#what">What we do</a>
+      <a href="#ai">Applied AI</a>
       <a href="#about">About</a>
       <a href="#contact" class="btn">Get in touch</a>
     </nav>
@@ -186,8 +205,9 @@
       <span class="eyebrow"><span class="dot"></span> Bengaluru, India</span>
       <h1>Technology that <em>compounds</em>.</h1>
       <p class="lede">
-        SOARAXIS is a technology company building software products, discovery platforms
-        and community applications — and advising the teams that have to ship them at scale.
+        SOARAXIS is a technology company building software products, applied AI systems,
+        discovery platforms and community applications — and advising the teams that have
+        to ship them at scale.
       </p>
       <div class="cta-row">
         <a href="#contact" class="btn">Start a conversation</a>
@@ -233,6 +253,42 @@
     </div>
   </section>
 
+  <!-- APPLIED AI -->
+  <section id="ai" class="ai-band">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">Applied AI</p>
+        <h2>AI that survives contact with production</h2>
+        <p>Most AI work fails somewhere between the demo and the on-call rota. We build the part that comes after the demo — the evaluation, the guardrails and the cost envelope that make a model something you can actually run a business on.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 7V4"/><circle cx="12" cy="3" r="1.2"/><path d="M9 12v2M15 12v2"/><path d="M1.5 12v3M22.5 12v3"/></svg></div>
+          <h3>AI product engineering</h3>
+          <p>Assistants, retrieval and agent workflows wired into the systems you already run — with the data plumbing, latency budgets and failure modes designed in rather than discovered later.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l5-5 4 3 6-7"/><path d="M14 8h4v4"/><path d="M3 21h18"/></svg></div>
+          <h3>Evaluation &amp; reliability</h3>
+          <p>Quality you can measure: eval harnesses, regression suites and human review loops, so a prompt change ships on evidence instead of a vibe check.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+          <h3>AI adoption advisory</h3>
+          <p>Where AI genuinely pays for itself in your stack, and where it does not. Build-versus-buy, model selection, data governance and the honest cost of running it.</p>
+        </article>
+      </div>
+
+      <p class="ai-note">
+        <strong>Our bias:</strong> ship the smallest thing that works, measure it against a real
+        baseline, and keep a human in the loop wherever a wrong answer is expensive.
+      </p>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section id="about">
     <div class="wrap split">
@@ -258,7 +314,7 @@
 
       <dl class="facts">
         <div class="fact"><dt>Entity</dt><dd>SOARAXIS Private Limited</dd></div>
-        <div class="fact"><dt>Focus</dt><dd>Product engineering · Platforms · Advisory</dd></div>
+        <div class="fact"><dt>Focus</dt><dd>Product engineering · Applied AI · Platforms · Advisory</dd></div>
         <div class="fact"><dt>Engagements</dt><dd>Fractional, project and retained</dd></div>
       </dl>
     </div>
