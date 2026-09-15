@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOARAXIS — Technology that compounds</title>
+<meta name="description" content="SOARAXIS Private Limited — a Bengaluru technology company building software products, discovery platforms and community applications, and advising teams that ship at scale.">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="SOARAXIS — Technology that compounds">
+<meta property="og:description" content="Software products, discovery platforms and engineering advisory, from Bengaluru.">
+<meta property="og:url" content="https://soaraxis.com/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232563eb'/><path d='M50 22 L74 66 L50 56 L26 66 Z' fill='white'/></svg>">
+
+<style>
+  :root{
+    --ink:#0f172a;
+    --ink-soft:#475569;
+    --ink-faint:#94a3b8;
+    --line:#e2e8f0;
+    --bg:#ffffff;
+    --bg-alt:#f8fafc;
+    --accent:#2563eb;
+    --accent-soft:#eff6ff;
+    --radius:14px;
+    --maxw:1120px;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:var(--font);
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.85);
+    backdrop-filter:saturate(180%) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;letter-spacing:.14em;font-size:15px}
+  .logo .mark{
+    width:30px;height:30px;border-radius:8px;background:var(--accent);
+    display:grid;place-items:center;flex:none;
+  }
+  .logo .mark svg{width:16px;height:16px;display:block}
+  .nav-links{display:flex;align-items:center;gap:32px}
+  .nav-links a:not(.btn){text-decoration:none;color:var(--ink-soft);font-size:15px;font-weight:500}
+  .nav-links a:not(.btn):hover{color:var(--ink)}
+  .btn{
+    display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+    padding:11px 22px;border-radius:10px;font-weight:600;font-size:15px;
+    transition:background .15s ease, transform .15s ease;
+  }
+  .btn:hover{background:#1d4ed8;transform:translateY(-1px)}
+  .btn-ghost{
+    background:transparent;color:var(--ink);border:1px solid var(--line);
+  }
+  .btn-ghost:hover{background:var(--bg-alt);border-color:#cbd5e1}
+  @media (max-width:760px){ .nav-links a:not(.btn){display:none} }
+
+  /* ---------- Hero ---------- */
+  .hero{padding:96px 0 84px;position:relative;overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(620px 320px at 78% -10%, #dbeafe 0%, transparent 70%),
+      radial-gradient(520px 280px at 8% 0%, #f1f5f9 0%, transparent 70%);
+  }
+  .hero .wrap{position:relative}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--accent-soft);color:var(--accent);
+    font-size:13px;font-weight:600;letter-spacing:.04em;
+    padding:6px 14px;border-radius:999px;margin-bottom:26px;
+  }
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  h1{
+    font-size:clamp(2.3rem,5.4vw,3.9rem);
+    line-height:1.08;letter-spacing:-.025em;font-weight:700;
+    margin:0 0 22px;max-width:15ch;
+  }
+  h1 em{font-style:normal;color:var(--accent)}
+  .lede{font-size:clamp(1.05rem,2vw,1.28rem);color:var(--ink-soft);max-width:60ch;margin:0 0 36px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .cta-note{font-size:14px;color:var(--ink-faint)}
+
+  /* ---------- Sections ---------- */
+  section{padding:88px 0}
+  .alt{background:var(--bg-alt);border-block:1px solid var(--line)}
+  .sec-head{max-width:64ch;margin-bottom:52px}
+  .kicker{
+    font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--accent);margin:0 0 14px;
+  }
+  h2{font-size:clamp(1.7rem,3.4vw,2.4rem);line-height:1.18;letter-spacing:-.02em;margin:0 0 16px;font-weight:700}
+  .sec-head p{color:var(--ink-soft);font-size:1.05rem;margin:0}
+
+  .grid{display:grid;gap:22px;grid-template-columns:repeat(4,1fr)}
+  @media (max-width:1040px){ .grid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:620px){ .grid{grid-template-columns:1fr} }
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px 28px;transition:border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+  }
+  .card:hover{border-color:#cbd5e1;box-shadow:0 8px 28px -14px rgba(15,23,42,.18);transform:translateY(-2px)}
+  .card .icon{
+    width:42px;height:42px;border-radius:11px;background:var(--accent-soft);
+    display:grid;place-items:center;margin-bottom:18px;
+  }
+  .card .icon svg{width:21px;height:21px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .card h3{margin:0 0 9px;font-size:1.12rem;font-weight:650;letter-spacing:-.01em}
+  .card p{margin:0;color:var(--ink-soft);font-size:.97rem}
+
+  /* ---------- Split / about ---------- */
+  .split{display:grid;gap:56px;grid-template-columns:1.15fr .85fr;align-items:start}
+  @media (max-width:880px){ .split{grid-template-columns:1fr;gap:40px} }
+  .prose p{color:var(--ink-soft);font-size:1.05rem;margin:0 0 18px}
+  .prose p:last-child{margin-bottom:0}
+  .prose strong{color:var(--ink);font-weight:600}
+
+  .facts{border:1px solid var(--line);border-radius:var(--radius);background:#fff;overflow:hidden}
+  .fact{padding:20px 24px;border-bottom:1px solid var(--line)}
+  .fact:last-child{border-bottom:0}
+  .fact dt{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 5px}
+  .fact dd{margin:0;font-size:1rem;font-weight:550;color:var(--ink)}
+
+  /* ---------- Contact ---------- */
+  .contact-box{
+    background:var(--ink);color:#fff;border-radius:20px;
+    padding:clamp(36px,6vw,64px);text-align:center;
+  }
+  .contact-box h2{color:#fff;margin-bottom:14px}
+  .contact-box p{color:#cbd5e1;max-width:52ch;margin:0 auto 30px;font-size:1.05rem}
+  .contact-box .btn{background:#fff;color:var(--ink)}
+  .contact-box .btn:hover{background:#e2e8f0}
+  .contact-alt{margin-top:20px;font-size:.95rem;color:#94a3b8}
+  .contact-alt a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+
+  /* ---------- Footer ---------- */
+  footer{border-top:1px solid var(--line);padding:40px 0;font-size:.92rem;color:var(--ink-faint)}
+  .foot{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+  .foot a{color:var(--ink-soft);text-decoration:none}
+  .foot a:hover{color:var(--ink)}
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;scroll-behavior:auto!important}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">
+      <span class="mark"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 18 L78 70 L50 58 L22 70 Z" fill="#fff"/></svg></span>
+      SOARAXIS
+    </a>
+    <nav class="nav-links">
+      <a href="#what">What we do</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="btn">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span> Bengaluru, India</span>
+      <h1>Technology that <em>compounds</em>.</h1>
+      <p class="lede">
+        SOARAXIS is a technology company building software products, discovery platforms
+        and community applications — and advising the teams that have to ship them at scale.
+      </p>
+      <div class="cta-row">
+        <a href="#contact" class="btn">Start a conversation</a>
+        <a href="#what" class="btn btn-ghost">See what we do</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT WE DO -->
+  <section id="what" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">What we do</p>
+        <h2>Four practices, one engineering standard</h2>
+        <p>We work end to end — from the architecture decision to the thing running in production with someone on call for it.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+          <h3>Software product development</h3>
+          <p>Product engineering from zero to launch — web, mobile and the services behind them. Built to be handed over, not to be rewritten.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6 6 .9-4.5 4.3 1.1 6.3L12 16.5 6.4 19.5l1.1-6.3L3 8.9 9 8z"/></svg></div>
+          <h3>Engineering advisory</h3>
+          <p>Fractional CTO and architecture review for founders scaling past their first team: platform design, delivery practice, hiring and technical due diligence.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></div>
+          <h3>Discovery &amp; marketplace platforms</h3>
+          <p>Search, matching and transaction systems where relevance, trust and unit economics all have to work at once.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="3.5"/><path d="M22 20v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.6a4 4 0 0 1 0 7"/></svg></div>
+          <h3>Community platforms</h3>
+          <p>Applications built for real groups of people — identity, moderation and engagement designed in from the first sprint.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap split">
+      <div class="prose">
+        <p class="kicker">About</p>
+        <h2>Built by people who have run the on-call rota</h2>
+        <p>
+          SOARAXIS Private Limited is an independent technology company registered in
+          Karnataka.
+        </p>
+        <p>
+          We come from environments where downtime is measured in money — and that shapes
+          how we work. We have owned systems in production, grown engineering teams through
+          the awkward middle, and made the unglamorous calls — migrations, reconciliation,
+          compliance, the second rewrite — that decide whether a product survives its own
+          growth.
+        </p>
+        <p>
+          We take on a small number of engagements at a time, so the people who scope the
+          work are the people who do it.
+        </p>
+      </div>
+
+      <dl class="facts">
+        <div class="fact"><dt>Entity</dt><dd>SOARAXIS Private Limited</dd></div>
+        <div class="fact"><dt>Focus</dt><dd>Product engineering · Platforms · Advisory</dd></div>
+        <div class="fact"><dt>Engagements</dt><dd>Fractional, project and retained</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="alt">
+    <div class="wrap">
+      <div class="contact-box">
+        <h2>Tell us what you're building</h2>
+        <p>Whether it's a product to build, a platform to untangle or an engineering team to steady — reach out and we'll take it from there.</p>
+        <a class="btn" href="https://www.linkedin.com/in/harshavardhanme/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="yr">2026</span> SOARAXIS Private Limited. All rights reserved.</div>
+    <div><a href="https://www.linkedin.com/in/harshavardhanme/" target="_blank" rel="noopener">LinkedIn</a> · Bengaluru, India</div>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
