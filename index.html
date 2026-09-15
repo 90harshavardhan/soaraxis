@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SOARAXIS — Technology that compounds</title>
-<meta name="description" content="SOARAXIS Private Limited — a Bengaluru technology company building software products, applied AI systems, discovery platforms and community applications, and advising teams that ship at scale.">
+<meta name="description" content="SOARAXIS Private Limited — a Bengaluru technology company building software products, applied AI systems for eldercare and caregivers, discovery platforms and community applications, and advising teams that ship at scale.">
 <meta name="theme-color" content="#ffffff">
 
 <!-- Open Graph / social -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="SOARAXIS — Technology that compounds">
-<meta property="og:description" content="Software products, applied AI, discovery platforms and engineering advisory, from Bengaluru.">
+<meta property="og:description" content="Software products, applied AI for eldercare and caregivers, discovery platforms and engineering advisory, from Bengaluru.">
 <meta property="og:url" content="https://soaraxis.com/">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -127,7 +127,7 @@
   .card p{margin:0;color:var(--ink-soft);font-size:.97rem}
 
   /* ---------- AI band ---------- */
-  .ai-band{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .ai-band{position:relative;overflow:hidden}
   .ai-band::before{
     content:"";position:absolute;inset:0;pointer-events:none;
     background:
@@ -143,6 +143,16 @@
     color:var(--ink-soft);font-size:1rem;max-width:72ch;
   }
   .ai-note strong{color:var(--ink);font-weight:600}
+
+  /* ---------- Eldercare ---------- */
+  .principles{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+  .principles li{position:relative;padding-left:30px;color:var(--ink-soft);font-size:1rem}
+  .principles li::before{
+    content:"";position:absolute;left:0;top:.5em;width:16px;height:16px;border-radius:50%;
+    background:var(--accent-soft);
+    box-shadow:inset 0 0 0 1.5px var(--accent);
+  }
+  .principles li strong{color:var(--ink);font-weight:600}
 
   /* ---------- Split / about ---------- */
   .split{display:grid;gap:56px;grid-template-columns:1.15fr .85fr;align-items:start}
@@ -191,6 +201,7 @@
     <nav class="nav-links">
       <a href="#what">What we do</a>
       <a href="#ai">Applied AI</a>
+      <a href="#eldercare">Eldercare</a>
       <a href="#about">About</a>
       <a href="#contact" class="btn">Get in touch</a>
     </nav>
@@ -289,6 +300,61 @@
     </div>
   </section>
 
+  <!-- ELDERCARE -->
+  <section id="eldercare" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">Eldercare &amp; caregivers</p>
+        <h2>The people doing the caring need the help first</h2>
+        <p>Eldercare runs on families, home carers and nurses holding an enormous amount in their heads — medications, appointments, small changes in condition, and the paperwork behind all of it. That is where we point our AI work: at the load on the caregiver, not at replacing the care.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 5.6a5 5 0 0 0-7.1 0L12 6.9l-1.3-1.3a5 5 0 1 0-7.1 7.1L12 21l8.4-8.3a5 5 0 0 0 0-7.1z"/></svg></div>
+          <h3>Care coordination</h3>
+          <p>Scattered updates from family, home carers and clinicians turned into one shared picture — so the next person on shift starts informed instead of guessing.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/><path d="M12 13v5M9.5 15.5h5"/></svg></div>
+          <h3>Less admin, more presence</h3>
+          <p>Medication schedules, appointment prep, insurance forms and visit notes drafted in the background — giving hours back to the person who should be in the room, not at a desk.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l2.5-6 4 13 2.5-7h7"/></svg></div>
+          <h3>Early, gentle signals</h3>
+          <p>Quiet drift in sleep, mobility, appetite or routine surfaced as a prompt for a human to check in. A nudge to a carer — never an autonomous clinical decision.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l7.5 3v5.6c0 4.4-3 8.2-7.5 9.8-4.5-1.6-7.5-5.4-7.5-9.8V5.8z"/><path d="M9.3 12.2l2 2 3.5-3.9"/></svg></div>
+          <h3>Answers at 2am</h3>
+          <p>A plain-language companion for the questions that arrive out of hours — what this medication interacts with, what a symptom might mean, when it warrants a call. Always pointed back to a clinician for the decision.</p>
+        </article>
+      </div>
+
+      <div class="split" style="margin-top:56px">
+        <div class="prose">
+          <h3 style="font-size:1.25rem;margin:0 0 16px">How we hold the line</h3>
+          <p>
+            Older adults are not a low-stakes test bed. A confident wrong answer about a
+            medication is not a bug report — it is harm. So we build this work under tighter
+            constraints than anything else we do, and we would rather ship something narrow
+            that we can stand behind.
+          </p>
+        </div>
+        <ul class="principles">
+          <li><strong>Assistive, not autonomous.</strong> AI drafts, summarises and flags. A human decides anything clinical.</li>
+          <li><strong>The older adult is a participant.</strong> Not a monitored object — consent and visibility by default.</li>
+          <li><strong>Dignity over surveillance.</strong> The least data that does the job, and a clear reason for every bit of it.</li>
+          <li><strong>Escalation is a feature.</strong> Knowing when to stop and fetch a person is designed in, not bolted on.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section id="about">
     <div class="wrap split">
@@ -315,6 +381,7 @@
       <dl class="facts">
         <div class="fact"><dt>Entity</dt><dd>SOARAXIS Private Limited</dd></div>
         <div class="fact"><dt>Focus</dt><dd>Product engineering · Applied AI · Platforms · Advisory</dd></div>
+        <div class="fact"><dt>Domain focus</dt><dd>Eldercare &amp; caregiver technology</dd></div>
         <div class="fact"><dt>Engagements</dt><dd>Fractional, project and retained</dd></div>
       </dl>
     </div>
